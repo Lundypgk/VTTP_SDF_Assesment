@@ -28,6 +28,7 @@ public class Main {
 					first = false;
 					continue;
 				}
+
 				totalLine++;
 				String[] toSend = parseCSVLine(curr_line);
 				BikeEntry current = BikeEntry.toBikeEntry(toSend);
@@ -61,7 +62,7 @@ public class Main {
 
 			for (int i =0; i <5; i++) {
 				BikeEntry current = storage.get(i);
-				System.out.printf("The %s highest recorded number of cyclist was in %s, on a %s in the month of %s.There were a total of %d cyclist.The weather was %s. %s was not a Holiday\n",
+				System.out.printf("The %s (position) highest recorded number of cyclist was in %s (season), on a %s (day) in the month of %s (month).There were a total of %d (total) cyclist.The weather was %s (weather). %s (day) was not a Holiday\n",
 								  positioning.get(i),
 								  Utilities.toSeason(current.getSeason()),
 								  day.get(current.getWeekday()),
